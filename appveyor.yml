@@ -19,12 +19,6 @@ deploy:
     secure: pI6WWkSGlLdvpdtDo1sMqeQ3ReWjnCgUtKKrXIZBpJv81xMuhzTygUTTHRK20RXi
   symbol_server: https://www.myget.org/F/ilyaf-test-packages/symbols/api/v2/package
   on:
-    branch: develop
-
-- provider: NuGet
-  server: https://www.myget.org/F/ilyaf-test-packages/api/v2/package
-  api_key:
-    secure: pI6WWkSGlLdvpdtDo1sMqeQ3ReWjnCgUtKKrXIZBpJv81xMuhzTygUTTHRK20RXi
-  symbol_server: https://www.myget.org/F/ilyaf-test-packages/symbols/api/v2/package
-  on:
-    appveyor_repo_tag: true
+    branch: 
+      - develop
+      - appveyor_repo_tag: true
