@@ -20,7 +20,6 @@ deploy:
   symbol_server: https://www.myget.org/F/ilyaf-test-packages/symbols/api/v2/package
   on:
     branch: develop
-    appveyor_repo_tag: true
 
 - provider: NuGet
   server: https://www.myget.org/F/ilyaf-test-packages/api/v2/package
