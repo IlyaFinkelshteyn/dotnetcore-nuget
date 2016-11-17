@@ -21,4 +21,5 @@ deploy:
   on:
     branch: 
       - develop
-      - master
+      - master 
+    appveyor_repo_tag: true
