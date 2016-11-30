@@ -1,0 +1,15 @@
+version: 1.0.{build}
+
+before_build:
+- cmd: dotnet restore
+
+build:
+  verbosity: minimal
+
+after_build:
+- ps: write-host "APPVEYOR_BUILD_NUMBER: $env:APPVEYOR_BUILD_NUMBER"
+- ps: idotnet pack src\dotnetcore-nuget -o .\Artifacts --version-suffix=$env:APPVEYOR_BUILD_NUMBER
+
+artifacts:
+- path: .\Artifacts\*
+
